@@ -17,7 +17,7 @@ import { UrlExistsPipe } from './pipes/url-exists/url-exists.pipe';
 import { Url } from '@prisma/client';
 import { Response } from 'express';
 import { FilterUrlsDto } from './dto/filter-urls.dto';
-import { AuthGuard } from 'src/auth/auth.guard';
+import { AuthGuard } from '../../auth/auth.guard';
 
 @Controller()
 export class UrlController {

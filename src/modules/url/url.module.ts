@@ -1,7 +1,7 @@
 import { Module } from '@nestjs/common';
 import { UrlService } from './url.service';
 import { UrlController } from './url.controller';
-import { UidModule } from 'src/services/uid/uid.module';
+import { UidModule } from '../../services/uid/uid.module';
 
 @Module({
   imports: [UidModule],
