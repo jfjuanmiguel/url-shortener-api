@@ -16,12 +16,10 @@ beforeAll(async () => {
     imports: [AppModule],
   }).compile();
 
-  // Apply consistent set up to main.ts
   app = moduleFixture.createNestApplication();
   app.use(helmet());
   app.useGlobalPipes(new ValidationPipe({ whitelist: true }));
 
-  // Get instances of services
   cache = moduleFixture.get<CacheService>(CacheService);
   database = moduleFixture.get<DatabaseService>(DatabaseService);
 

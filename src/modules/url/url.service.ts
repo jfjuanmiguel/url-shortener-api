@@ -50,7 +50,9 @@ export class UrlService {
       skip,
       take: limit,
     });
-    const totalCount = await this.databaseService.url.count();
+    const totalCount = await this.databaseService.url.count({
+      where: whereClause,
+    });
 
     const meta = {
       totalCount,
